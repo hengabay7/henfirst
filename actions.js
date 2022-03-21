@@ -12,12 +12,12 @@ router.post('/register',(req,res)=>{
     const accout=users.find(x=>x.email==email);
     if(accout){
         return res.status(200).json({
-            Message:'user Exist please try other email'
+            Message:'user exist please try other email'
         });
      } else{
             users.push({email:email,password:password});
             return res.status(200).json({
-                Message:'acconunt created',
+                Message:'Acconunt created',
                 users_count:users.length,
                 date:users
             });      
